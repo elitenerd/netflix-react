@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: 'y'
+      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NETFLIX_REACT_8652D }}'
-          projectId: netflix-react-8652d
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PELICULAS_DEV }}'
+          projectId: peliculas-dev
